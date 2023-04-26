@@ -7,8 +7,6 @@
         <div>
             Hello, <?php echo $username ?>
         </div>
-
-        test
     </div>
 <?php
     component( '/footer.php' );
