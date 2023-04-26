@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App\Controllers;
 
 use App\Controllers\Web;
 
@@ -18,11 +18,9 @@ class App {
          */
         $web = new Web(self::$currentPage, self::$requestMethod);
 
-        include_once '../helpers/views.php';
+        include_once '../resources/helpers/views.php';
         include_once '../src/web.php';
-    }
 
-    // protected static function get() {
-    //     echo self::$requestMethod;
-    // }
+        $web->hasRoute();
+    }
 }

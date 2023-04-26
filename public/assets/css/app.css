@@ -1,4 +1,4 @@
-* {
+/* * {
     --color-dark: #433d3d;
     --color-white: #fff;
     --font-sans: Arial;
@@ -22,3 +22,7 @@ html {
         max-width: var( --max-width );
     }
 }
+
+.pt-8 {
+    padding-top: 2rem;
+} */

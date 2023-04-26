@@ -9,3 +9,13 @@ $web->get( '/', function() {
         ]
     ];
 } );
+
+$web->get( '/about', function() {
+    return [
+        'view' => 'about',
+        'data' => [
+            'username' => 'JackalJon',
+            'rank' => 'Platinum'
+        ]
+    ];
+} );

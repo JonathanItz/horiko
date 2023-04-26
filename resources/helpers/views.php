@@ -2,7 +2,7 @@
 
 function component( $view ) {
     $view = trim( $view, '/' );
-    $view = "../src/templates/components/$view";
+    $view = "../resources/templates/components/$view";
     if( ! file_exists( $view ) ) {
         return false;
     }
@@ -17,10 +17,11 @@ function asset( $path ) {
     $path = trim( $path, '/' );
     $path = "/public/assets/$path";
 
+    
     if( ! file_exists( $pathExists ) ) {
         echo 'no';
         return false;
     }
 
-    return '<link rel="stylesheet" href="' . $path . '">';
+    return '<link rel="stylesheet" href="' . $path . '?c=' . filemtime( $pathExists ) . '">';
 }
